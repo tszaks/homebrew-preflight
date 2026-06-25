@@ -1,6 +1,8 @@
 # homebrew-preflight
 
-Homebrew tap for [Preflight CLI](https://preflightlaunch.com) - App Store Review Scanner.
+Homebrew tap for [Preflight CLI](https://github.com/tszaks/Preflight) - open-source App Store review scanner.
+
+The npm package is available at [npmjs.com/package/preflightlaunch](https://www.npmjs.com/package/preflightlaunch).
 
 ## Install
 
@@ -12,9 +14,8 @@ brew install preflight
 ## Usage
 
 ```bash
-preflight login          # Authenticate
-preflight scan ./MyApp   # Dry-run scan
-preflight submit ./MyApp # Full analysis
+preflight scan ./MyApp   # Local review scan
+preflight update         # Pull the latest package
 ```
 
 ## Quickstart TL;DR
@@ -22,7 +23,6 @@ preflight submit ./MyApp # Full analysis
 ```bash
 brew tap tszaks/preflight
 brew install preflight
-preflight login
 preflight scan ./MyApp
 ```
 
@@ -43,9 +43,8 @@ Setup:
 1) brew tap tszaks/preflight
 2) brew install preflight
 Use:
-- preflight login
 - preflight scan <path>
-- preflight submit <path>
+- preflight update
 How it works:
 - Homebrew reads Formula/preflight.rb and installs the CLI artifact.
 ```
